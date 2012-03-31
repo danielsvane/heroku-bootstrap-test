@@ -1,12 +1,10 @@
 .container
-  .row
-    .span12
-      .well
-        h1 Test blog
-        p
-          | Testing out railway, jade, stylus and bootstrap. Go to 
-          a(href="/posts") /posts
-          |  to add posts.
+  .hero-unit
+    h1 Test blog
+    p
+      | Testing out railway, jade, stylus and bootstrap. Go to 
+      != link_to('/posts', '/posts')
+      |  to add posts.
   .row.thumbnails
     - posts.forEach(function (post) {
       li.span3

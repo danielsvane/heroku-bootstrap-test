@@ -1,0 +1,10 @@
+.container {
+  margin-top: 2rem;
+}
+.thumbnail {
+  border: none;
+  box-shadow: none;
+}
+.thumbnail:hover {
+  background: #eee;
+}
