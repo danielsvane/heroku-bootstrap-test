@@ -1,0 +1,13 @@
+.page-header
+  h1 Details of post
+
+div(about=path_to.post(post))
+  .field(property='title')= post.title
+  .field(property='content')= post.content
+  .field(property='createdAt')= post.createdAt
+
+.actions
+  != link_to('Edit', path_to.edit_post(post), {class: 'btn primary'}) + ' '
+  != link_to('Delete', path_to.post(post), {class: 'btn danger', method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'})
+  span= ' or '
+  != link_to('Back to index', path_to.posts)

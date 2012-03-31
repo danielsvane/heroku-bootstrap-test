@@ -1,0 +1,19 @@
+.container
+  .row
+    .span12
+      .well
+        h1 Test blog
+        p
+          | Testing out railway, jade, stylus and bootstrap. Go to 
+          a(href="/posts") /posts
+          |  to add posts.
+  .row.thumbnails
+    - posts.forEach(function (post) {
+      li.span3
+        .thumbnail
+          img(src="http://placehold.it/260x180", alt="")
+          .caption
+            h5= post.title
+            p= post.content
+            a.btn.btn-small.btn-inverse Read more
+    - });

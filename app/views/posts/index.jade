@@ -1,0 +1,15 @@
+.page-header
+  h1 Index of posts
+
+- posts.forEach(function (post) {
+  .row
+    .span-two-thirds= 'post #' + post.id
+    .span-one-third
+      != link_to('Edit', path_to.edit_post(post), {class: 'btn primary'}) + ' '
+      != link_to('Delete', path_to.post(post), {class: 'btn danger', method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'})
+- });
+
+hr
+
+.well
+  != link_to('New post', path_to.new_post, {class: 'btn'})

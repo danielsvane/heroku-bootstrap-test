@@ -1,0 +1,19 @@
+!!! 5
+html
+  head
+    title= 'Controller post:' + title
+    != stylesheet_link_tag('bootstrap', 'bootstrap-responsive')
+    != csrf_meta_tag()
+  body
+    .container
+      - var flash = request.flash('info').pop(); if (flash) {
+        .alert-message.info= flash
+      - }
+
+      - flash = request.flash('error').pop(); if (flash) {
+        .alert-message.error= flash
+      - }
+
+      != body
+
+  != javascript_include_tag('https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', 'rails', 'application')
