@@ -19,8 +19,7 @@
     "sinon": "*"
   },
   "scripts": {
-    "test": "nodeunit test/*/*",
-    "start": "server.coffee"
+    "test": "nodeunit test/*/*"
   },
   "subdomain": "railwayjsblog"
 }
